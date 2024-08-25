@@ -20,7 +20,7 @@ const app = express();
 
 //middelwares
 app.use(cors({
-  origin:[""],
+  origin: process.env.CORS_ORIGIN || "*", 
   methods:["GET","POST","PUT","DELETE"],
   credentials:true
 }));
